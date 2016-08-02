@@ -1,0 +1,18 @@
+<h1>Edit Product</h1>
+<%= form_for @product, :html => { :multipart => true } do |f| %>
+<%= f.select :category_id, @categories%>
+<% f.file_field :product_img %>
+<%= f.label :"Product Name" %>
+<%= f.text_field :name %>
+<%= f.label :"Description" %>
+<%= f.text_field :description %>
+<%= f.label :"Price" %>
+<%= f.text_field :price %>
+<%= f.label :"Picture" %>
+<%= f.file_field :picture %>
+
+<%= f.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>
+
+<%= link_to "Sell your product", new_product_path %>

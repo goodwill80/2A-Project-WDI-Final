@@ -1,0 +1,47 @@
+<h1 class="current-category"><%= params[:category] %></h1>
+
+<h1>THe Online Marketplace to sell and buy your groceries</h1>
+
+<% @products.each do |product| %>
+
+<table class="table table-striped">
+
+<thead>
+  <tr>
+    <th>Image</th>
+    <th>Product Name</th>
+    <th>Price(SGD)</th>
+    <th>Buy now</th>
+    <th>Sell</th>
+  </tr>
+</thead>
+
+<tbody>
+
+
+  <tr>
+    <td>
+      <%= image_tag product.picture.url if product.picture? %>
+    </td>
+
+    <td>
+      <%= link_to product.name, product_path(product) %>
+    </td>
+
+    <td>
+      <%= product[:price]%>
+    </td>
+
+
+    <td>
+    <%= link_to "Buy Now", '#' %>
+    </td>
+
+    <td>
+      <%= link_to "Start selling with Redmart!", new_product_path %>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<%end%>

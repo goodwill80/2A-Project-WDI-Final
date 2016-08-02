@@ -1,0 +1,18 @@
+<% provide(:title, "Home") %>
+<div class="center jumbotron" id="jump">
+  <h1>Welcome to Red Mart</h1>
+
+  <h2>
+    Freshest Groceries at your doorstep
+  </h2>
+
+<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+<% if current_user?(@user) %>
+<%= render 'shared/signin' %>
+<% else %>
+<img src="https://allottspta.files.wordpress.com/2015/04/welcome.jpg" style="width:1100px;height:228px;">
+<h1>Hello Stranger!</h1>
+<p>Etiam at mollis diam, sagittis molestie elit. Maecenas interdum laoreet tellus, vel ultricies ligula mattis vel. Proin at lacus vel nulla bibendum aliquam quis id justo. Vivamus mi quam, accumsan eget finibus in, auctor ac lectus. Nulla in augue eget massa luctus egestas. Quisque cursus pharetra leo aliquam egestas. Nam at molestie est. Nam non tristique nibh. Fusce et bibendum ligula. Vestibulum dictum laoreet venenatis. Mauris elementum tellus in mi vehicula, id commodo nulla bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas convallis molestie ante, iaculis euismod dolor finibus quis. Pellentesque eu eleifend urna, sit amet condimentum est. Donec imperdiet varius porttitor. Duis ac hendrerit elit.</p>
+<%end%>
