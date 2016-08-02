@@ -13,6 +13,7 @@ gem 'mini_magick',             '4.5.1'
 gem 'fog',                     '1.38.0'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'bcrypt',         '3.1.11'
+gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
