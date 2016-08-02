@@ -15,7 +15,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'bcrypt',         '3.1.11'
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
