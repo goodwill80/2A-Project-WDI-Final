@@ -4,8 +4,10 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Products", products_path %></li>
-            <li><%= link_to "Sell with us", new_product_path %></li>
+        <li><%= link_to "Products", products_path %></li>
+        <% if logged_in? %>
+        <li><%= link_to "Sell with us", new_product_path %></li>
+        <% end %>
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact", contact_path %></li>
 

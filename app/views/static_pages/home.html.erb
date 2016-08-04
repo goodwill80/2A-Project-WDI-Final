@@ -9,6 +9,11 @@
 <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
+<div>
+  <h2>Notice to Sellers - Sign Up or Login now to upload your sale items</h2>
+</div>
+
+
 <% if current_user?(@user) %>
 <%= render 'shared/signin' %>
 <% else %>

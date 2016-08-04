@@ -3,7 +3,9 @@
 <h1>THe Online Marketplace to sell and buy your groceries</h1>
 
 <div>
+  <% if logged_in? %>
   <h2><%= link_to "Upload your products now and start selling with Redmart!", new_product_path %></h2>
+  <%end%>
 </div>
 
 <% @products.each do |product| %>
